@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{0BCBBD2D-3D20-3835-A456-F8220BE765BD}</ProjectGUID>
+    <WindowsTargetPlatformVersion>10.0.10586.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>unit</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\DIP_2016\assimp\build\test\Debug\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">unit.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">unit</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\DIP_2016\assimp\build\test\Release\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">unit.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">unit</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\DIP_2016\assimp\build\test\MinSizeRel\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">unit.dir\MinSizeRel\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">unit</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\DIP_2016\assimp\build\test\RelWithDebInfo\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">unit.dir\RelWithDebInfo\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">unit</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\DIP_2016\assimp\build;D:\DIP_2016\assimp\include;D:\DIP_2016\assimp\contrib\zlib;D:\DIP_2016\assimp\build\contrib\zlib;D:\DIP_2016\assimp\build\test\gtest\src\gtest\googletest\include;D:\DIP_2016\assimp\build\test\gtest\src\gtest\gtest\include;D:\DIP_2016\assimp\code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;OPENDDL_NO_USE_CPP11;ASSIMP_BUILD_NO_C4D_IMPORTER;ASSIMP_TEST_MODELS_DIR="D:/DIP_2016/assimp/test/models";CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;OPENDDL_NO_USE_CPP11;ASSIMP_BUILD_NO_C4D_IMPORTER;ASSIMP_TEST_MODELS_DIR=\"D:/DIP_2016/assimp/test/models\";CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\DIP_2016\assimp\build;D:\DIP_2016\assimp\include;D:\DIP_2016\assimp\contrib\zlib;D:\DIP_2016\assimp\build\contrib\zlib;D:\DIP_2016\assimp\build\test\gtest\src\gtest\googletest\include;D:\DIP_2016\assimp\build\test\gtest\src\gtest\gtest\include;D:\DIP_2016\assimp\code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\DIP_2016\assimp\build;D:\DIP_2016\assimp\include;D:\DIP_2016\assimp\contrib\zlib;D:\DIP_2016\assimp\build\contrib\zlib;D:\DIP_2016\assimp\build\test\gtest\src\gtest\googletest\include;D:\DIP_2016\assimp\build\test\gtest\src\gtest\gtest\include;D:\DIP_2016\assimp\code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:x64 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\code\Debug\assimp-vc140-mt.lib;gtest.lib;..\contrib\zlib\Debug\zlibstaticd.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:/DIP_2016/assimp/build/test/gtest/src/gtest-build/googlemock/gtest;D:/DIP_2016/assimp/build/test/gtest/src/gtest-build/googlemock/gtest/$(Configuration);D:/DIP_2016/assimp/build/test/gtest/src/gtest-build/googlemock/gtest/ReleaseLibs;D:/DIP_2016/assimp/build/test/gtest/src/gtest-build/googlemock/gtest/ReleaseLibs/$(Configuration);D:/DIP_2016/assimp/build/test/gtest/src/gtest-build/googlemock/gtest/DebugLibs;D:/DIP_2016/assimp/build/test/gtest/src/gtest-build/googlemock/gtest/DebugLibs/$(Configuration);D:/DIP_2016/assimp/build;D:/DIP_2016/assimp/build/$(Configuration);/lib;/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/DIP_2016/assimp/build/test/Debug/unit.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/DIP_2016/assimp/build/test/Debug/unit.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\DIP_2016\assimp\build;D:\DIP_2016\assimp\include;D:\DIP_2016\assimp\contrib\zlib;D:\DIP_2016\assimp\build\contrib\zlib;D:\DIP_2016\assimp\build\test\gtest\src\gtest\googletest\include;D:\DIP_2016\assimp\build\test\gtest\src\gtest\gtest\include;D:\DIP_2016\assimp\code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;OPENDDL_NO_USE_CPP11;ASSIMP_BUILD_NO_C4D_IMPORTER;ASSIMP_TEST_MODELS_DIR="D:/DIP_2016/assimp/test/models";CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;OPENDDL_NO_USE_CPP11;ASSIMP_BUILD_NO_C4D_IMPORTER;ASSIMP_TEST_MODELS_DIR=\"D:/DIP_2016/assimp/test/models\";CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\DIP_2016\assimp\build;D:\DIP_2016\assimp\include;D:\DIP_2016\assimp\contrib\zlib;D:\DIP_2016\assimp\build\contrib\zlib;D:\DIP_2016\assimp\build\test\gtest\src\gtest\googletest\include;D:\DIP_2016\assimp\build\test\gtest\src\gtest\gtest\include;D:\DIP_2016\assimp\code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\DIP_2016\assimp\build;D:\DIP_2016\assimp\include;D:\DIP_2016\assimp\contrib\zlib;D:\DIP_2016\assimp\build\contrib\zlib;D:\DIP_2016\assimp\build\test\gtest\src\gtest\googletest\include;D:\DIP_2016\assimp\build\test\gtest\src\gtest\gtest\include;D:\DIP_2016\assimp\code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:x64 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\code\Release\assimp-vc140-mt.lib;gtest.lib;..\contrib\zlib\Release\zlibstatic.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:/DIP_2016/assimp/build/test/gtest/src/gtest-build/googlemock/gtest;D:/DIP_2016/assimp/build/test/gtest/src/gtest-build/googlemock/gtest/$(Configuration);D:/DIP_2016/assimp/build/test/gtest/src/gtest-build/googlemock/gtest/ReleaseLibs;D:/DIP_2016/assimp/build/test/gtest/src/gtest-build/googlemock/gtest/ReleaseLibs/$(Configuration);D:/DIP_2016/assimp/build/test/gtest/src/gtest-build/googlemock/gtest/DebugLibs;D:/DIP_2016/assimp/build/test/gtest/src/gtest-build/googlemock/gtest/DebugLibs/$(Configuration);D:/DIP_2016/assimp/build;D:/DIP_2016/assimp/build/$(Configuration);/lib;/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>No</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/DIP_2016/assimp/build/test/Release/unit.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/DIP_2016/assimp/build/test/Release/unit.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\DIP_2016\assimp\build;D:\DIP_2016\assimp\include;D:\DIP_2016\assimp\contrib\zlib;D:\DIP_2016\assimp\build\contrib\zlib;D:\DIP_2016\assimp\build\test\gtest\src\gtest\googletest\include;D:\DIP_2016\assimp\build\test\gtest\src\gtest\gtest\include;D:\DIP_2016\assimp\code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;OPENDDL_NO_USE_CPP11;ASSIMP_BUILD_NO_C4D_IMPORTER;ASSIMP_TEST_MODELS_DIR="D:/DIP_2016/assimp/test/models";CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;OPENDDL_NO_USE_CPP11;ASSIMP_BUILD_NO_C4D_IMPORTER;ASSIMP_TEST_MODELS_DIR=\"D:/DIP_2016/assimp/test/models\";CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\DIP_2016\assimp\build;D:\DIP_2016\assimp\include;D:\DIP_2016\assimp\contrib\zlib;D:\DIP_2016\assimp\build\contrib\zlib;D:\DIP_2016\assimp\build\test\gtest\src\gtest\googletest\include;D:\DIP_2016\assimp\build\test\gtest\src\gtest\gtest\include;D:\DIP_2016\assimp\code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\DIP_2016\assimp\build;D:\DIP_2016\assimp\include;D:\DIP_2016\assimp\contrib\zlib;D:\DIP_2016\assimp\build\contrib\zlib;D:\DIP_2016\assimp\build\test\gtest\src\gtest\googletest\include;D:\DIP_2016\assimp\build\test\gtest\src\gtest\gtest\include;D:\DIP_2016\assimp\code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:x64 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\code\MinSizeRel\assimp-vc140-mt.lib;gtest.lib;..\contrib\zlib\MinSizeRel\zlibstatic.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:/DIP_2016/assimp/build/test/gtest/src/gtest-build/googlemock/gtest;D:/DIP_2016/assimp/build/test/gtest/src/gtest-build/googlemock/gtest/$(Configuration);D:/DIP_2016/assimp/build/test/gtest/src/gtest-build/googlemock/gtest/ReleaseLibs;D:/DIP_2016/assimp/build/test/gtest/src/gtest-build/googlemock/gtest/ReleaseLibs/$(Configuration);D:/DIP_2016/assimp/build/test/gtest/src/gtest-build/googlemock/gtest/DebugLibs;D:/DIP_2016/assimp/build/test/gtest/src/gtest-build/googlemock/gtest/DebugLibs/$(Configuration);D:/DIP_2016/assimp/build;D:/DIP_2016/assimp/build/$(Configuration);/lib;/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>No</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/DIP_2016/assimp/build/test/MinSizeRel/unit.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/DIP_2016/assimp/build/test/MinSizeRel/unit.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\DIP_2016\assimp\build;D:\DIP_2016\assimp\include;D:\DIP_2016\assimp\contrib\zlib;D:\DIP_2016\assimp\build\contrib\zlib;D:\DIP_2016\assimp\build\test\gtest\src\gtest\googletest\include;D:\DIP_2016\assimp\build\test\gtest\src\gtest\gtest\include;D:\DIP_2016\assimp\code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;OPENDDL_NO_USE_CPP11;ASSIMP_BUILD_NO_C4D_IMPORTER;ASSIMP_TEST_MODELS_DIR="D:/DIP_2016/assimp/test/models";CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;OPENDDL_NO_USE_CPP11;ASSIMP_BUILD_NO_C4D_IMPORTER;ASSIMP_TEST_MODELS_DIR=\"D:/DIP_2016/assimp/test/models\";CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\DIP_2016\assimp\build;D:\DIP_2016\assimp\include;D:\DIP_2016\assimp\contrib\zlib;D:\DIP_2016\assimp\build\contrib\zlib;D:\DIP_2016\assimp\build\test\gtest\src\gtest\googletest\include;D:\DIP_2016\assimp\build\test\gtest\src\gtest\gtest\include;D:\DIP_2016\assimp\code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\DIP_2016\assimp\build;D:\DIP_2016\assimp\include;D:\DIP_2016\assimp\contrib\zlib;D:\DIP_2016\assimp\build\contrib\zlib;D:\DIP_2016\assimp\build\test\gtest\src\gtest\googletest\include;D:\DIP_2016\assimp\build\test\gtest\src\gtest\gtest\include;D:\DIP_2016\assimp\code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:x64 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\code\RelWithDebInfo\assimp-vc140-mt.lib;gtest.lib;..\contrib\zlib\RelWithDebInfo\zlibstatic.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:/DIP_2016/assimp/build/test/gtest/src/gtest-build/googlemock/gtest;D:/DIP_2016/assimp/build/test/gtest/src/gtest-build/googlemock/gtest/$(Configuration);D:/DIP_2016/assimp/build/test/gtest/src/gtest-build/googlemock/gtest/ReleaseLibs;D:/DIP_2016/assimp/build/test/gtest/src/gtest-build/googlemock/gtest/ReleaseLibs/$(Configuration);D:/DIP_2016/assimp/build/test/gtest/src/gtest-build/googlemock/gtest/DebugLibs;D:/DIP_2016/assimp/build/test/gtest/src/gtest-build/googlemock/gtest/DebugLibs/$(Configuration);D:/DIP_2016/assimp/build;D:/DIP_2016/assimp/build/$(Configuration);/lib;/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/DIP_2016/assimp/build/test/RelWithDebInfo/unit.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/DIP_2016/assimp/build/test/RelWithDebInfo/unit.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\DIP_2016\assimp\test\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/DIP_2016/assimp/test/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HD:/DIP_2016/assimp -BD:/DIP_2016/assimp/build --check-stamp-file D:\DIP_2016\assimp\build\test\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/DIP_2016/assimp/test/CMakeLists.txt;D:\DIP_2016\assimp\test\CMakeLists.txt;D:\DIP_2016\assimp\cmake-modules\AddGTest.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindThreads.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CheckLibraryExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\ExternalProject.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindGit.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindGit.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\RepositoryInfo.txt.in;D:\DIP_2016\assimp\build\test\gtest\tmp\gtest-cfgcmd.txt.in;D:\DIP_2016\assimp\test\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\DIP_2016\assimp\build\test\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/DIP_2016/assimp/test/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HD:/DIP_2016/assimp -BD:/DIP_2016/assimp/build --check-stamp-file D:\DIP_2016\assimp\build\test\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/DIP_2016/assimp/test/CMakeLists.txt;D:\DIP_2016\assimp\test\CMakeLists.txt;D:\DIP_2016\assimp\cmake-modules\AddGTest.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindThreads.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CheckLibraryExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\ExternalProject.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindGit.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindGit.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\RepositoryInfo.txt.in;D:\DIP_2016\assimp\build\test\gtest\tmp\gtest-cfgcmd.txt.in;D:\DIP_2016\assimp\test\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\DIP_2016\assimp\build\test\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/DIP_2016/assimp/test/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HD:/DIP_2016/assimp -BD:/DIP_2016/assimp/build --check-stamp-file D:\DIP_2016\assimp\build\test\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/DIP_2016/assimp/test/CMakeLists.txt;D:\DIP_2016\assimp\test\CMakeLists.txt;D:\DIP_2016\assimp\cmake-modules\AddGTest.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindThreads.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CheckLibraryExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\ExternalProject.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindGit.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindGit.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\RepositoryInfo.txt.in;D:\DIP_2016\assimp\build\test\gtest\tmp\gtest-cfgcmd.txt.in;D:\DIP_2016\assimp\test\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\DIP_2016\assimp\build\test\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/DIP_2016/assimp/test/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HD:/DIP_2016/assimp -BD:/DIP_2016/assimp/build --check-stamp-file D:\DIP_2016\assimp\build\test\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/DIP_2016/assimp/test/CMakeLists.txt;D:\DIP_2016\assimp\test\CMakeLists.txt;D:\DIP_2016\assimp\cmake-modules\AddGTest.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindThreads.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CheckLibraryExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\ExternalProject.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindGit.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindGit.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\RepositoryInfo.txt.in;D:\DIP_2016\assimp\build\test\gtest\tmp\gtest-cfgcmd.txt.in;D:\DIP_2016\assimp\test\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\DIP_2016\assimp\build\test\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\DIP_2016\assimp\test\unit\CCompilerTest.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="D:\DIP_2016\assimp\test\unit\Main.cpp"  />
+    <ClCompile Include="D:\DIP_2016\assimp\code\Version.cpp"  />
+    <ClCompile Include="D:\DIP_2016\assimp\test\unit\AssimpAPITest.cpp"  />
+    <ClCompile Include="D:\DIP_2016\assimp\test\unit\utBlendImportAreaLight.cpp"  />
+    <ClCompile Include="D:\DIP_2016\assimp\test\unit\utBlendImportMaterials.cpp"  />
+    <ClCompile Include="D:\DIP_2016\assimp\test\unit\utColladaExportCamera.cpp"  />
+    <ClCompile Include="D:\DIP_2016\assimp\test\unit\utColladaExportLight.cpp"  />
+    <ClCompile Include="D:\DIP_2016\assimp\test\unit\utFastAtof.cpp"  />
+    <ClCompile Include="D:\DIP_2016\assimp\test\unit\utFindDegenerates.cpp"  />
+    <ClCompile Include="D:\DIP_2016\assimp\test\unit\utFindInvalidData.cpp"  />
+    <ClCompile Include="D:\DIP_2016\assimp\test\unit\utFixInfacingNormals.cpp"  />
+    <ClCompile Include="D:\DIP_2016\assimp\test\unit\utGenNormals.cpp"  />
+    <ClCompile Include="D:\DIP_2016\assimp\test\unit\utImporter.cpp"  />
+    <ClCompile Include="D:\DIP_2016\assimp\test\unit\utImproveCacheLocality.cpp"  />
+    <ClCompile Include="D:\DIP_2016\assimp\test\unit\utIOSystem.cpp"  />
+    <ClCompile Include="D:\DIP_2016\assimp\test\unit\utIssues.cpp"  />
+    <ClCompile Include="D:\DIP_2016\assimp\test\unit\utJoinVertices.cpp"  />
+    <ClCompile Include="D:\DIP_2016\assimp\test\unit\utLimitBoneWeights.cpp"  />
+    <ClCompile Include="D:\DIP_2016\assimp\test\unit\utMaterialSystem.cpp"  />
+    <ClCompile Include="D:\DIP_2016\assimp\test\unit\utMatrix3x3.cpp"  />
+    <ClCompile Include="D:\DIP_2016\assimp\test\unit\utMatrix4x4.cpp"  />
+    <ClCompile Include="D:\DIP_2016\assimp\test\unit\utPretransformVertices.cpp"  />
+    <ClCompile Include="D:\DIP_2016\assimp\test\unit\utRemoveComments.cpp"  />
+    <ClCompile Include="D:\DIP_2016\assimp\test\unit\utRemoveComponent.cpp"  />
+    <ClCompile Include="D:\DIP_2016\assimp\test\unit\utRemoveRedundantMaterials.cpp"  />
+    <ClCompile Include="D:\DIP_2016\assimp\test\unit\utScenePreprocessor.cpp"  />
+    <ClCompile Include="D:\DIP_2016\assimp\test\unit\utSharedPPData.cpp"  />
+    <ClCompile Include="D:\DIP_2016\assimp\test\unit\utSortByPType.cpp"  />
+    <ClCompile Include="D:\DIP_2016\assimp\test\unit\utSplitLargeMeshes.cpp"  />
+    <ClCompile Include="D:\DIP_2016\assimp\test\unit\utTargetAnimation.cpp"  />
+    <ClCompile Include="D:\DIP_2016\assimp\test\unit\utTextureTransform.cpp"  />
+    <ClCompile Include="D:\DIP_2016\assimp\test\unit\utTriangulate.cpp"  />
+    <ClCompile Include="D:\DIP_2016\assimp\test\unit\utVertexTriangleAdjacency.cpp"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:/DIP_2016/assimp/build/ZERO_CHECK.vcxproj">
+      <Project>D1DF43E4-6826-3771-B529-A93169C0CA3D</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/DIP_2016/assimp/build/code/assimp.vcxproj">
+      <Project>00806ACB-7E00-3F95-A6DB-53F74290280A</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/DIP_2016/assimp/build/test/gtest.vcxproj">
+      <Project>A29C71C1-ABED-3371-9484-0DB0B0A2FBC6</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/DIP_2016/assimp/build/contrib/zlib/zlibstatic.vcxproj">
+      <Project>4D80ABAC-9A64-3051-BF88-A794F560BDDC</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

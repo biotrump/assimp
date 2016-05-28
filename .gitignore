@@ -1,12 +1,12 @@
 .idea
-build
+#build
 .project
 *.kdev4*
 
 # Visual Studio
-*.sln
+#*.sln
 *.ncb
-*.vcproj
+#*.vcproj
 
 # Output
 bin/
@@ -34,7 +34,7 @@ test/results
 # Python
 __pycache__
 *.log
-*.vcxproj
+#*.vcxproj
 *.filters
 *.tlog
 Assimp.sdf
