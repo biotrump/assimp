@@ -7,7 +7,7 @@
 
 //
 // sorry just
-// cant get this one to work under windows
+// can't get this one to work under windows
 // have disabled for the now
 //
 // will look at it some more later
@@ -17,7 +17,7 @@
 #undef ILUT_USE_ALLEGRO
 
 #undef ILUT_USE_DIRECTX8
-#define ILUT_USE_DIRECTX9
+//#define ILUT_USE_DIRECTX9
 //#define ILUT_USE_DIRECTX10
 #define ILUT_USE_OPENGL
 //#define ILUT_USE_SDL
