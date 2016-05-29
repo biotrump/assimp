@@ -34,7 +34,7 @@
 
 
 // The default hard-coded path. Can be overridden by supplying a path through the command line.
-static std::string modelpath = "../../test/models/OBJ/spider.obj";
+static std::string modelpath = "../../../test/models/OBJ/spider.obj";
 
 
 HGLRC		hRC=NULL;			// Permanent Rendering Context
