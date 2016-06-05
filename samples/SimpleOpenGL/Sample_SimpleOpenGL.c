@@ -25,13 +25,16 @@
 #include <assimp/scene.h>
 #include <assimp/postprocess.h>
 
+#define HARP_ROT_Y	319		//1760
+#define HARP_SCALE	(2.0f)
 /* the global Assimp scene object */
 const struct aiScene* scene = NULL;
 GLuint scene_list = 0;
 struct aiVector3D scene_min, scene_max, scene_center;
 
 /* current rotation angle */
-static float angle = 0.f;
+static float angle = HARP_ROT_Y;//harp 3D	//0.f;
+static float model_scale = HARP_SCALE;
 
 #define aisgl_min(x,y) (x<y?x:y)
 #define aisgl_max(x,y) (y>x?y:x)
@@ -245,7 +248,7 @@ void do_motion (void)
 	static int frames = 0;
 
 	int time = glutGet(GLUT_ELAPSED_TIME);
-	angle += (time-prev_time)*0.01;
+//	angle += (time-prev_time)*0.01;
 	prev_time = time;
 
 	frames += 1;
@@ -279,7 +282,7 @@ void display(void)
 	tmp = scene_max.x-scene_min.x;
 	tmp = aisgl_max(scene_max.y - scene_min.y,tmp);
 	tmp = aisgl_max(scene_max.z - scene_min.z,tmp);
-	tmp = 1.f / tmp;
+	tmp = model_scale / tmp;
 	glScalef(tmp, tmp, tmp);
 
         /* center the model */
@@ -321,6 +324,116 @@ int loadasset (const char* path)
 	return 1;
 }
 
+void KeyboardCB(unsigned char Key, int x, int y)
+{
+	switch (Key)
+	{
+	case 'w':
+		break;
+	case 's':
+		break;
+	case 'a':
+		angle--;
+		printf("%c, angle=%f\n", Key, angle);
+
+		break;
+	case 'z': {
+		model_scale += 0.1;
+		/* scale the whole asset to fit into our view frustum */
+		float tmp = scene_max.x - scene_min.x;
+		tmp = aisgl_max(scene_max.y - scene_min.y, tmp);
+		tmp = aisgl_max(scene_max.z - scene_min.z, tmp);
+		tmp = model_scale / tmp;
+		glScalef(tmp, tmp, tmp);
+		printf("%c\n", Key);
+	}
+		break;
+	case 'd':
+		angle++;
+		printf("%c, angle=%f\n", Key,angle);
+		break;
+	case 'x':{
+		model_scale -= 0.1;
+		if (model_scale < 0.2f)
+			model_scale = 0.2f;
+		/* scale the whole asset to fit into our view frustum */
+		float tmp = scene_max.x - scene_min.x;
+		tmp = aisgl_max(scene_max.y - scene_min.y, tmp);
+		tmp = aisgl_max(scene_max.z - scene_min.z, tmp);
+		tmp = model_scale / tmp;
+		glScalef(tmp, tmp, tmp);
+		printf("%c\n", Key);
+	}
+		break;
+	default:
+		printf("%c\n", Key);
+		break;
+	}
+	//glutPostRedisplay(); 
+	/* this redraws the scene without
+						 waiting for the display callback so that any changes appear
+						 instantly */
+}
+
+void SpecialKeyboardCB(int Key, int x, int y)
+{
+
+	switch (Key)
+	{
+
+		// Pause
+	case GLUT_KEY_F1:
+	{
+		/*
+		m_pause = !m_pause;
+		GameCamera.UserControl = false;
+		Ret = true;
+		*/
+		break;
+	}
+	// Remove balls
+	case GLUT_KEY_F3:
+	{
+		/*
+		if (m_cursorPointsCount != 30)
+		{
+		m_cursorPointsCount -= 30;
+		m_cursorColorFactor += 0.01f;
+		}
+		Ret = true;
+		*/
+		break;
+	}
+	// Add balls
+	case GLUT_KEY_F4:
+	{
+		/*
+		if (m_cursorColorFactor >= 0.01)
+		{
+		m_cursorPointsCount += 30;
+		m_cursorColorFactor -= 0.01f;
+		}
+
+		Ret = true;
+		*/
+		break;
+	}
+	// Auto Rotate Camera
+	case GLUT_KEY_F5:
+	{
+		/*
+		GameCamera.UserControl = false;
+		Ret = true;
+		*/
+		break;
+	}
+	}
+	//glutPostRedisplay(); 
+	/* this redraws the scene without
+						 waiting for the display callback so that any changes appear
+						 instantly */
+}
+
 /* ---------------------------------------------------------------------------- */
 int main(int argc, char **argv)
 {
@@ -333,6 +446,10 @@ int main(int argc, char **argv)
 
 	glutCreateWindow("Assimp - Very simple OpenGL sample");
 	glutDisplayFunc(display);
+	glutSpecialFunc(SpecialKeyboardCB);
+	glutKeyboardFunc(KeyboardCB);
+//	glutMouseFunc(mouseDownCB);
+//	glutMotionFunc(mouseMoveCB);
 	glutReshapeFunc(reshape);
 
 	/* get a handle to the predefined STDOUT log stream and attach
@@ -387,3 +504,54 @@ int main(int argc, char **argv)
 	return 0;
 }
 
+#if 0
+
+// Moves/alters the camera positions based on user input
+void Do_Movement()
+{
+	// Camera controls
+	if (keys[GLFW_KEY_W])
+		camera.ProcessKeyboard(FORWARD, deltaTime);
+	if (keys[GLFW_KEY_S])
+		camera.ProcessKeyboard(BACKWARD, deltaTime);
+	if (keys[GLFW_KEY_A])
+		camera.ProcessKeyboard(LEFT, deltaTime);
+	if (keys[GLFW_KEY_D])
+		camera.ProcessKeyboard(RIGHT, deltaTime);
+}
+
+// Is called whenever a key is pressed/released via GLFW
+void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode)
+{
+	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
+		glfwSetWindowShouldClose(window, GL_TRUE);
+
+	if (action == GLFW_PRESS)
+		keys[key] = true;
+	else if (action == GLFW_RELEASE)
+		keys[key] = false;
+}
+
+void mouse_callback(GLFWwindow* window, double xpos, double ypos)
+{
+	if (firstMouse)
+	{
+		lastX = xpos;
+		lastY = ypos;
+		firstMouse = false;
+	}
+
+	GLfloat xoffset = xpos - lastX;
+	GLfloat yoffset = lastY - ypos;
+
+	lastX = xpos;
+	lastY = ypos;
+
+	camera.ProcessMouseMovement(xoffset, yoffset);
+}
+
+void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
+{
+	camera.ProcessMouseScroll(yoffset);
+}
+#endif
