@@ -328,6 +328,9 @@ void KeyboardCB(unsigned char Key, int x, int y)
 {
 	switch (Key)
 	{
+	case 27:
+		glutLeaveMainLoop();
+		break;
 	case 'w':
 		break;
 	case 's':
